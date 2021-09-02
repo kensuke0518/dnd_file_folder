@@ -1,0 +1,44 @@
+$paddingNum:"";
+@for $i from 1 through 100{
+    @if $i < 10{
+        $paddingNum:"0#{$i}";
+    }
+    @else{
+        $paddingNum:"#{$i}";
+    }
+    .u-pt#{$paddingNum}{padding-top:#{$i * 0.1}rem !important;}
+    .u-pr#{$paddingNum}{padding-right:#{$i * 0.1}rem !important;}
+    .u-pb#{$paddingNum}{padding-bottom:#{$i * 0.1}rem !important;}
+    .u-pl#{$paddingNum}{padding-left:#{$i * 0.1}rem !important;}
+    .u-p#{$paddingNum}{padding:#{$i * 0.1}rem !important;}
+}
+//ブレークポイント
+@for $i from 1 through 100{
+    @if $i < 10{
+        $paddingNum:"0#{$i}";
+    }
+    @else{
+        $paddingNum:"#{$i}";
+    }
+    .u-pt#{$paddingNum}--md{padding-top:#{$i * 0.1}rem !important;}
+    .u-pr#{$paddingNum}--md{padding-right:#{$i * 0.1}rem !important;}
+    .u-pb#{$paddingNum}--md{padding-bottom:#{$i * 0.1}rem !important;}
+    .u-pl#{$paddingNum}--md{padding-left:#{$i * 0.1}rem !important;}
+    .u-p#{$paddingNum}--md{padding:#{$i * 0.1}rem !important;}
+}
+
+//ピクセル値
+/*$paddingNum:"";
+@for $i from 1 through 100{
+    @if $i < 10{
+        $paddingNum:"0#{$i}";
+    }
+    @else{
+        $paddingNum:"#{$i}";
+    }
+    .u-pt#{$paddingNum}{padding-top:#{$paddingNum}px !important;}
+    .u-pr#{$paddingNum}{padding-right:#{$paddingNum}px !important;}
+    .u-pb#{$paddingNum}{padding-bottom:#{$paddingNum}px !important;}
+    .u-pl#{$paddingNum}{padding-left:#{$paddingNum}px !important;}
+    .u-p#{$paddingNum}{padding:#{$paddingNum}px !important;}
+}*/

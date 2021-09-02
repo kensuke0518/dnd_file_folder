@@ -1,0 +1,46 @@
+$marginNum:"";
+@for $i from 1 through 100{
+    @if $i < 10{
+        $marginNum:"0#{$i}";
+    }
+    @else{
+        $marginNum:"#{$i}";
+    }
+    .u-mt#{$marginNum}{margin-top:#{$i * 0.1}rem !important;}
+    .u-mr#{$marginNum}{margin-right:#{$i * 0.1}rem !important;}
+    .u-mb#{$marginNum}{margin-bottom:#{$i * 0.1}rem !important;}
+    .u-ml#{$marginNum}{margin-left:#{$i * 0.1}rem !important;}
+    .u-m#{$marginNum}{margin:#{$i * 0.1}rem !important;}
+}
+//ブレークポイント
+@for $i from 1 through 100{
+    @if $i < 10{
+        $marginNum:"0#{$i}";
+    }
+    @else{
+        $marginNum:"#{$i}";
+    }
+    @include mq(){
+        .u-mt#{$marginNum}--md{margin-top:#{$i * 0.1}rem !important;}
+        .u-mr#{$marginNum}--md{margin-right:#{$i * 0.1}rem !important;}
+        .u-mb#{$marginNum}--md{margin-bottom:#{$i * 0.1}rem !important;}
+        .u-ml#{$marginNum}--md{margin-left:#{$i * 0.1}rem !important;}
+        .u-m#{$marginNum}--md{margin:#{$i * 0.1}rem !important;}
+    }
+} 
+
+//ピクセル値
+/*$marginNum:"";
+@for $i from 1 through 100{
+    @if $i < 10{
+        $marginNum:"0#{$i}";
+    }
+    @else{
+        $marginNum:"#{$i}";
+    }
+    .u-mt#{$marginNum}{margin-top:#{$marginNum}px !important;}
+    .u-mr#{$marginNum}{margin-right:#{$marginNum}px !important;}
+    .u-mb#{$marginNum}{margin-bottom:#{$marginNum}px !important;}
+    .u-ml#{$marginNum}{margin-left:#{$marginNum}px !important;}
+    .u-m#{$marginNum}{margin:#{$marginNum}px !important;}
+}*/

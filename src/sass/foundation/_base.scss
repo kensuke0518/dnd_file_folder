@@ -1,0 +1,51 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @include mq(){
+        font-size: 50%;
+    }
+}
+body{
+    min-width: $siteContentWidth;
+    background: var(--bgcolor);
+    color: var(--textcolor);
+    font-family: 
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "BIZ UDPGothic",
+    Meiryo,
+    sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    word-wrap:break-word;
+    overflow-wrap : break-word;
+    @include mq(){
+        min-width: 0;
+    }
+}
+a{
+    transition: color 250ms ease, opacity 250ms ease;
+    color: color(linkC,base);
+    text-decoration: none;
+}
+a:hover{
+    color: color(linkC,light);
+}
+ul{
+    list-style: none;
+}
+img{
+    vertical-align: bottom;
+    @include mq(){
+        width:100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
